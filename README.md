@@ -7,7 +7,7 @@ It provides intuitive functions and classes to align, format, wrap, colorize, an
 
 ---
 
-## 🚀 Features
+## Features
 
 - Align text: left, right, center, justify
 - Wrap and indent multiline text
@@ -20,7 +20,7 @@ It provides intuitive functions and classes to align, format, wrap, colorize, an
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone or copy this module into your project
@@ -30,7 +30,7 @@ pip install -e .
 
 ---
 
-## 🧰 Usage Examples
+## Usage Examples
 
 ### Align a single line
 
@@ -90,7 +90,7 @@ print(colorize("Error!", "red"))
 
 ---
 
-## 🧱 Format a Table (the easiest way!)
+## Format a Table (the easiest way!)
 
 ```python
 from textalign import format_table
@@ -112,7 +112,7 @@ print(format_table(
 
 ---
 
-## 🧪 Advanced Usage with `ColumnBuilder`
+## Advanced Usage with `ColumnBuilder`
 
 ```python
 from textalign import ColumnBuilder, ColumnLayout
@@ -154,6 +154,6 @@ print(layout.format())
 
 ---
 
-## 📃 License
+## License
 
 MIT License
