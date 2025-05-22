@@ -1,7 +1,7 @@
 
-# textalign
+# Textalign
 
-**textalign** is a lightweight Python module for advanced text formatting and alignment in terminals, logs, CLI output, and simple plain-text reports.
+**Textalign** is a lightweight Python module for advanced text formatting and alignment in terminals, logs, CLI output, and simple plain-text reports.
 
 It provides intuitive functions and classes to align, format, wrap, colorize, and decorate text with optional borders and multi-column layouts.
 
