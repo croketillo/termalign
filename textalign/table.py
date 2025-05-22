@@ -9,18 +9,19 @@ def format_table(
     indents: list[int] = None
 ) -> str:
     """
-    Formatea múltiples bloques de texto como columnas en una tabla alineada.
+    Formats multiple blocks of text as aligned columns in a table.
 
     Args:
-        texts: Lista de textos para cada columna.
-        widths: Ancho de cada columna.
-        aligns: Alineación de cada columna ('left', 'center', 'right', 'justify').
-        borders: Si se usan bordes ASCII alrededor de cada columna.
-        indents: Sangría izquierda por columna.
+        texts: List of text blocks for each column.
+        widths: Width of each column.
+        aligns: Alignment for each column ('left', 'center', 'right', 'justify').
+        borders: Whether to use ASCII borders around each column.
+        indents: Left indentation for each column.
 
     Returns:
-        Cadena con el texto formateado en columnas.
+        A string with the text formatted into aligned columns.
     """
+
     if aligns is None:
         aligns = ["left"] * len(texts)
     if indents is None:

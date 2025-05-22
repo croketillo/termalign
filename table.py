@@ -1,5 +1,5 @@
 from textalign.core import format_columns
-from textalign.utils import add_border
+from textalign.utils import add_border, colorize
 from textwrap import wrap
 
 # Diccionario con funciones agrupadas por sección
@@ -24,16 +24,21 @@ sections = {
     ]
 }
 
-# Definimos los anchos por columna
-widths = [42, 64, 20]  # función, descripción, sección
+# Anchos de columna
+widths = [42, 64, 20]
+lines = []
 
-# Encabezado
-lines = [
-    format_columns(["Function", "Description", "Section"], widths=widths, align="left"),
-    "-" * (sum(widths) + 4)
-]
+# ✅ Encabezado alineado correctamente con colorize + format_columns
+header = format_columns([
+    colorize("Function", bold=True, width=widths[0], align="left"),
+    colorize("Description", bold=True, width=widths[1], align="left"),
+    colorize("Section", bold=True, width=widths[2], align="left")
+], widths=widths, align="left")
 
-# Rellenamos fila por fila, manejando líneas largas
+lines.append(header)
+lines.append("-" * (sum(widths) + 4))
+
+# ✅ Cuerpo de la tabla
 for section, funcs in sections.items():
     for name, desc in funcs:
         name_lines = wrap(name, widths[0])
@@ -45,6 +50,6 @@ for section, funcs in sections.items():
             s = section if i == 0 else ""
             lines.append(format_columns([n, d, s], widths=widths, align="left"))
 
-# Combinar en bloque y aplicar borde
+# ✅ Aplicar borde
 table_text = "\n".join(lines)
 print(add_border(table_text, style="unicode"))

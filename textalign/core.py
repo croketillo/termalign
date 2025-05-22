@@ -1,4 +1,3 @@
-# textalign/core.py
 from textwrap import wrap
 from .utils import pad_line, indent_lines
 
