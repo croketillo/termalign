@@ -27,10 +27,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/croketillo/textalign"
+Homepage = "https://github.com/croketillo/termalign"
 
 [tool.setuptools]
-packages = ["textalign"]
+packages = ["termalign"]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
