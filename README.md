@@ -1,7 +1,7 @@
 
-# Textalign
+# Termalign
 
-**Textalign** is a lightweight Python module for advanced text formatting and alignment in terminals, logs, CLI output, and simple plain-text reports.
+**Termalign** is a lightweight Python module for advanced text formatting and alignment in terminals, logs, CLI output, and simple plain-text reports.
 
 It provides intuitive functions and classes to align, format, wrap, colorize, and decorate text with optional borders and multi-column layouts.
 
@@ -35,7 +35,7 @@ pip install -e .
 ### Align a single line
 
 ```python
-from textalign import align_line
+from termalign import align_line
 
 print(align_line("Hello", width=20, align="center"))
 # --> "       Hello        "
@@ -44,7 +44,7 @@ print(align_line("Hello", width=20, align="center"))
 ### Format a block of text
 
 ```python
-from textalign import format_block
+from termalign import format_block
 
 text = "Python is a powerful, readable, and versatile programming language."
 print(format_block(text, width=40, align="justify"))
@@ -56,7 +56,7 @@ print(format_block(text, width=40, align="justify"))
 ### Use a reusable formatter
 
 ```python
-from textalign import TextFormatter
+from termalign import TextFormatter
 
 fmt = TextFormatter(width=50, align="center", indent=4, border=True)
 print(fmt.format("Centered and bordered text"))
@@ -69,7 +69,7 @@ print(fmt.format("Centered and bordered text"))
 ### Add a border (ASCII, Unicode, Double, Dashed, DoubleDashed)
 
 ```python
-from textalign.utils import add_border
+from termalign.utils import add_border
 
 print(add_border("Hello World", style="unicode"))
 #┌─────────────┐
@@ -81,7 +81,7 @@ print(add_border("Hello World", style="unicode"))
 ### Apply color
 
 ```python
-from textalign.utils import colorize
+from termalign.utils import colorize
 
 print(colorize("Success!", "green", bold=True))
 print(colorize("Warning!", "yellow"))
@@ -93,7 +93,7 @@ print(colorize("Error!", "red"))
 ## Format a Table (the easiest way!)
 
 ```python
-from textalign import format_table
+from termalign import format_table
 
 print(format_table(
     texts=[
@@ -115,7 +115,7 @@ print(format_table(
 ## Advanced Usage with `ColumnBuilder`
 
 ```python
-from textalign import ColumnBuilder, ColumnLayout
+from termalign import ColumnBuilder, ColumnLayout
 
 layout = ColumnLayout.from_builders(
     ColumnBuilder("Left Column").width(30).align("left").border(),

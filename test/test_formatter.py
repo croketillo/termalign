@@ -1,5 +1,5 @@
 
-from textalign.formatter import TextFormatter
+from termalign.formatter import TextFormatter
 
 def test_textformatter_left():
     fmt = TextFormatter(width=20, align="left", indent=2, border=False)

@@ -1,4 +1,4 @@
-from textalign.table import format_table
+from termalign.table import format_table
 
 def test_format_table_basic():
     output = format_table(

@@ -1,6 +1,6 @@
 
 import pytest
-from textalign.utils import pad_line, indent_lines, add_border, colorize
+from termalign.utils import pad_line, indent_lines, add_border, colorize
 
 def test_pad_line_short():
     assert pad_line("abc", 6) == "abc   "

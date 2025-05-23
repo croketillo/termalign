@@ -1,8 +1,8 @@
-from textalign.core import format_columns
-from textalign.utils import add_border, colorize
+from termalign.core import format_columns
+from termalign.utils import add_border, colorize
 from textwrap import wrap
 
-# Diccionario con funciones agrupadas por sección
+
 sections = {
     "Core Functions": [
         ("align_line(text, width, align)", "Align a single line."),
@@ -24,11 +24,10 @@ sections = {
     ]
 }
 
-# Anchos de columna
+
 widths = [42, 64, 20]
 lines = []
 
-# ✅ Encabezado alineado correctamente con colorize + format_columns
 header = format_columns([
     colorize("Function", bold=True, width=widths[0], align="left"),
     colorize("Description", bold=True, width=widths[1], align="left"),
@@ -38,7 +37,6 @@ header = format_columns([
 lines.append(header)
 lines.append("-" * (sum(widths) + 4))
 
-# ✅ Cuerpo de la tabla
 for section, funcs in sections.items():
     for name, desc in funcs:
         name_lines = wrap(name, widths[0])
@@ -50,6 +48,5 @@ for section, funcs in sections.items():
             s = section if i == 0 else ""
             lines.append(format_columns([n, d, s], widths=widths, align="left"))
 
-# ✅ Aplicar borde
 table_text = "\n".join(lines)
 print(add_border(table_text, style="unicode"))

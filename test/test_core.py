@@ -1,6 +1,6 @@
 
 import pytest
-from textalign.core import align_line, format_block, wrap_and_indent, format_columns
+from termalign.core import align_line, format_block, wrap_and_indent, format_columns
 
 def test_align_line_left():
     assert align_line("hi", 5, "left") == "hi   "
